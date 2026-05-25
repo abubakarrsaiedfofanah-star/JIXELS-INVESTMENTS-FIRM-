@@ -551,7 +551,7 @@ h1 {
 .approach-page h2,
 .partners-page h2,
 .video-page h2,
-.presentation-page h2 {
+.highlights-page h2 {
   margin: 0;
   font-size: clamp(2rem, 5vw, 4.4rem);
   line-height: 1;
@@ -572,7 +572,7 @@ h1 {
 }
 
 .values-page,
-.presentation-page,
+.highlights-page,
 .problem-page,
 .what-page,
 .electronics-page,
@@ -753,18 +753,18 @@ h1 {
   text-align: center;
 }
 
-.presentation-page {
+.highlights-page {
   background: var(--paper);
 }
 
-.presentation-grid {
+.highlights-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 34px;
 }
 
-.presentation-card {
+.highlight-card {
   position: relative;
   display: block;
   overflow: hidden;
@@ -775,18 +775,18 @@ h1 {
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.presentation-card:hover {
+.highlight-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 24px 54px rgba(16, 24, 32, 0.16);
 }
 
-.presentation-grid img {
+.highlights-grid img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
-.presentation-grid h3 {
+.highlights-grid h3 {
   margin: 0;
   padding: 16px;
   font-size: 1.15rem;
@@ -819,6 +819,70 @@ h1 {
 
 .story-grid strong {
   color: var(--green);
+}
+
+.csr-page {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(24px, 5vw, 64px);
+  align-items: center;
+  padding: clamp(56px, 8vw, 108px) clamp(16px, 5vw, 72px);
+  background: #ffffff;
+}
+
+.csr-visual img {
+  width: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.csr-copy {
+  min-width: 0;
+}
+
+.csr-copy h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4.4rem);
+  line-height: 1;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.csr-copy > p:not(.eyebrow) {
+  color: #4b5563;
+  font-size: clamp(1rem, 1.7vw, 1.18rem);
+  line-height: 1.55;
+}
+
+.csr-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.csr-grid article {
+  padding: clamp(18px, 3vw, 24px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(15, 143, 95, 0.08), rgba(244, 185, 66, 0.14)),
+    #ffffff;
+  box-shadow: 0 12px 30px rgba(16, 24, 32, 0.06);
+}
+
+.csr-grid h3 {
+  margin: 0 0 8px;
+  font-size: 1.18rem;
+  line-height: 1.1;
+}
+
+.csr-grid p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.55;
 }
 
 .founder-page {
@@ -1057,6 +1121,7 @@ footer p {
   .approach-page,
   .partners-page,
   .video-layout,
+  .csr-page,
   .contact-section {
     grid-template-columns: 1fr;
   }
@@ -1082,7 +1147,7 @@ footer p {
   .outlet-grid,
   .story-grid,
   .quick-links,
-  .presentation-grid {
+  .highlights-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1109,7 +1174,8 @@ footer p {
 
   .info-page img,
   .about-us-page img,
-  .model-page img {
+  .model-page img,
+  .csr-visual img {
     min-height: 260px;
     height: auto;
   }
