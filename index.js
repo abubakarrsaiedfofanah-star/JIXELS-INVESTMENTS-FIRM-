@@ -21,11 +21,14 @@ const initializePage = () => {
 };
 
 const loadPage = async () => {
-  const componentNames = Array.from(document.querySelectorAll("[data-component]"), (target) => {
-    return target.dataset.component;
-  });
+  while (document.querySelector("[data-component]")) {
+    const componentNames = Array.from(document.querySelectorAll("[data-component]"), (target) => {
+      return target.dataset.component;
+    });
 
-  await Promise.all(componentNames.map(loadComponent));
+    await Promise.all(componentNames.map(loadComponent));
+  }
+
   initializePage();
 };
 

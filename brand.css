@@ -1,0 +1,17 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  width: clamp(150px, 20vw, 230px);
+  padding: 8px 12px;
+  border: 1px solid rgba(244, 185, 66, 0.62);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(244, 185, 66, 0.18);
+}
+
+.brand img {
+  width: 100%;
+  height: 54px;
+  object-fit: contain;
+  object-position: left center;
+}
