@@ -57,6 +57,8 @@
     const slides = Array.from(reel.querySelectorAll(".reel-slide"));
     const player = reel.closest(".video-player") || document;
     const toggle = player.querySelector(".reel-toggle");
+    const centerToggle = player.querySelector(".reel-center-toggle");
+    const label = player.querySelector(".reel-label");
     const progress = player.querySelector(".reel-progress span");
     const interval = 4200;
     let activeIndex = 0;
@@ -91,17 +93,36 @@
       frameId = window.requestAnimationFrame(tick);
     };
 
-    toggle.addEventListener("click", () => {
-      playing = !playing;
-      toggle.textContent = playing ? "Pause" : "Play";
-      toggle.setAttribute("aria-label", `${playing ? "Pause" : "Play"} video reel`);
+    const setPlaying = (nextPlaying) => {
+      playing = nextPlaying;
+      const state = playing ? "Pause" : "Play";
+      if (label) {
+        label.textContent = state;
+      } else {
+        toggle.textContent = state;
+      }
+      toggle.setAttribute("aria-label", `${state} video reel`);
+      if (centerToggle) {
+        centerToggle.setAttribute("aria-label", `${state} video reel`);
+      }
+      player.classList.toggle("is-playing", playing);
 
       if (playing) {
         showSlide(activeIndex + 1);
       } else {
         startedAt = Date.now();
       }
+    };
+
+    toggle.addEventListener("click", () => {
+      setPlaying(!playing);
     });
+
+    if (centerToggle) {
+      centerToggle.addEventListener("click", () => {
+        setPlaying(!playing);
+      });
+    }
 
     frameId = window.requestAnimationFrame(tick);
 
