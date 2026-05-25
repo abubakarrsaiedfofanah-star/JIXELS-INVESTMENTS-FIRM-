@@ -1,9 +1,59 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
-const topButton = document.querySelector(".top-button");
+const routeLinks = Array.from(document.querySelectorAll(".brand, a[href^='#']"));
+const routeSections = Array.from(document.querySelectorAll("main > section[id]"));
+const siteFooter = document.querySelector(".site-footer");
 const reel = document.querySelector("[data-video-reel]");
-const whatsappNumber = ""; // Add the Jixels WhatsApp number here, e.g. 254700000000.
-const defaultWhatsappText = "Hello Jixels, I would like to contact the team.";
+const whatsappNumber = "254713111666";
+const defaultWhatsappText = "Hello Jixels, I would like to learn more about your products, partnerships or support.";
+const routeIds = new Set([
+  "home",
+  "about-us",
+  "vision-mission",
+  "how-it-works",
+  "what-we-do",
+  "electronics",
+  "gallery",
+  "feedback",
+  "leadership",
+  "contact",
+  "tenje-values",
+  "problem",
+  "community-impact",
+  "success-stories",
+  "partner-with-jixels",
+  "outlets",
+  "privacy",
+]);
+
+const getRouteId = (hash) => {
+  const id = hash.replace("#", "") || "home";
+  return id === "management" ? "leadership" : id;
+};
+
+const showRoute = (id, shouldScroll = true) => {
+  const routeId = routeIds.has(id) ? id : "home";
+  const isHome = routeId === "home";
+
+  document.body.classList.toggle("single-section-view", !isHome);
+
+  routeSections.forEach((section) => {
+    section.classList.toggle("route-active", !isHome && section.id === routeId);
+  });
+
+  if (siteFooter) {
+    siteFooter.classList.toggle("route-active", !isHome && siteFooter.id === routeId);
+  }
+
+  routeLinks.forEach((link) => {
+    const linkId = getRouteId(link.hash || "");
+    link.classList.toggle("active", routeIds.has(linkId) && linkId === routeId);
+  });
+
+  if (shouldScroll) {
+    window.scrollTo({ top: 0, behavior: isHome ? "smooth" : "auto" });
+  }
+};
 
 const buildWhatsappUrl = (message) => {
   const encodedMessage = encodeURIComponent(message);
@@ -15,6 +65,30 @@ const buildWhatsappUrl = (message) => {
 document.querySelectorAll("[data-whatsapp-link]").forEach((link) => {
   link.href = buildWhatsappUrl(defaultWhatsappText);
 });
+
+routeLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const routeId = getRouteId(link.hash || "");
+
+    if (!routeIds.has(routeId)) {
+      return;
+    }
+
+    event.preventDefault();
+    history.pushState(null, "", `#${routeId}`);
+    showRoute(routeId);
+  });
+});
+
+window.addEventListener("hashchange", () => {
+  showRoute(getRouteId(window.location.hash));
+});
+
+window.addEventListener("popstate", () => {
+  showRoute(getRouteId(window.location.hash));
+});
+
+showRoute(getRouteId(window.location.hash), false);
 
 if (menuToggle && mainNav) {
   menuToggle.addEventListener("click", () => {
@@ -29,34 +103,6 @@ if (menuToggle && mainNav) {
     }
   });
 }
-
-if (topButton) {
-  topButton.addEventListener("click", () => {
-    document.querySelector("#home").scrollIntoView({ behavior: "smooth" });
-  });
-
-  window.addEventListener("scroll", () => {
-    topButton.classList.toggle("show", window.scrollY > 800);
-  });
-}
-
-document.querySelectorAll(".gallery-tab").forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const panelId = tab.getAttribute("aria-controls");
-
-    document.querySelectorAll(".gallery-tab").forEach((item) => {
-      const isActive = item === tab;
-      item.classList.toggle("active", isActive);
-      item.setAttribute("aria-selected", String(isActive));
-    });
-
-    document.querySelectorAll(".gallery-panel").forEach((panel) => {
-      const isActive = panel.id === panelId;
-      panel.classList.toggle("active", isActive);
-      panel.hidden = !isActive;
-    });
-  });
-});
 
 document.querySelectorAll("[data-whatsapp-form]").forEach((form) => {
   form.addEventListener("submit", (event) => {
