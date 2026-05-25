@@ -1,10 +1,11 @@
-﻿const loadComponent = async (name) => {
-  const target = document.querySelector(`[data-component="${name}"]`);
+const initializePage = () => {
+  window.JixelsFooter?.init();
+  window.JixelsHeader?.init();
+  window.JixelsBody?.init();
+};
 
-  if (!target) {
-    return;
-  }
-
+const loadComponent = async (target) => {
+  const name = target.dataset.component;
   const response = await fetch(`${name}.html`);
 
   if (!response.ok) {
@@ -14,19 +15,10 @@
   target.outerHTML = await response.text();
 };
 
-const initializePage = () => {
-  window.JixelsFooter?.init();
-  window.JixelsHeader?.init();
-  window.JixelsBody?.init();
-};
-
 const loadPage = async () => {
   while (document.querySelector("[data-component]")) {
-    const componentNames = Array.from(document.querySelectorAll("[data-component]"), (target) => {
-      return target.dataset.component;
-    });
-
-    await Promise.all(componentNames.map(loadComponent));
+    const components = Array.from(document.querySelectorAll("[data-component]"));
+    await Promise.all(components.map(loadComponent));
   }
 
   initializePage();
@@ -35,5 +27,6 @@ const loadPage = async () => {
 window.addEventListener("DOMContentLoaded", () => {
   loadPage().catch((error) => {
     console.error(error);
+    initializePage();
   });
 });
