@@ -2,8 +2,10 @@ Jixels static website
 
 Upload these files and folders together:
 - index.html
-- index.css
 - index.js
+- header.html, body.html, footer.html
+- header.css, body.css, footer.css
+- header.js, body.js, footer.js
 - assets/
 
-Open index.html in a browser to preview locally.
+Preview through a local web server so the HTML components can load.

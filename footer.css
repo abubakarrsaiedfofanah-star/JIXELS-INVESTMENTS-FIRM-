@@ -1,0 +1,229 @@
+﻿/* Footer, contact details, developer credit, and floating WhatsApp styles. */
+.whatsapp-float {
+  position: fixed;
+  right: 18px;
+  bottom: 28px;
+  z-index: 40;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 0 16px;
+  color: var(--ink);
+  background: var(--gold);
+  box-shadow: 0 14px 30px rgba(16, 24, 32, 0.24);
+  font-weight: 900;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus-visible {
+  color: #ffffff;
+  background: var(--green);
+  transform: translateY(-2px);
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: clamp(42px, 7vw, 82px) clamp(16px, 5vw, 72px) 10px;
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(247, 201, 72, 0.18), rgba(18, 60, 140, 0.34)),
+    var(--ink);
+}
+
+.contact-card {
+  flex: 1 1 100%;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 0.66fr);
+  gap: clamp(18px, 5vw, 48px);
+  width: 100%;
+  min-width: 0;
+}
+
+.contact-panel,
+.quick-panel {
+  min-width: 0;
+}
+
+.contact-panel h3,
+.quick-panel h3 {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+
+.contact-methods,
+.quick-links,
+.footer-link-group {
+  display: grid;
+}
+
+.contact-methods {
+  gap: 12px;
+}
+
+.contact-methods a,
+.quick-links a {
+  min-width: 0;
+  color: #ffffff;
+  overflow-wrap: anywhere;
+}
+
+.contact-methods a:hover,
+.quick-links a:hover {
+  color: var(--gold);
+}
+
+.contact-methods span,
+.contact-methods strong {
+  display: block;
+}
+
+.contact-methods span,
+.footer-link-group h4 {
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.contact-methods strong {
+  margin-top: 5px;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.quick-links {
+  gap: 18px;
+  padding-top: 4px;
+}
+
+.footer-link-groups {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.footer-link-group {
+  align-content: start;
+  gap: 9px;
+  min-width: 0;
+}
+
+.footer-link-group h4 {
+  margin: 0 0 3px;
+}
+
+.quick-links a {
+  display: block;
+  background: transparent;
+  font-size: 0.94rem;
+  font-weight: 800;
+  text-align: left;
+}
+
+.developer-credit {
+  flex: 0 1 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  max-width: 100%;
+  padding: 2px 0 0;
+  color: #ffffff;
+  background: transparent;
+  text-align: left;
+}
+
+.developer-credit div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.developer-credit img {
+  width: 54px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex: 0 0 auto;
+}
+
+.developer-credit span {
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.developer-credit a {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--gold);
+  background: transparent;
+  font-size: 0.95rem;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.developer-credit a:hover,
+.developer-credit a:focus-visible {
+  color: #ffffff;
+}
+
+.footer-line {
+  flex: 1 1 100%;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.footer-bottom {
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 3vw, 34px);
+  width: 100%;
+}
+
+.copyright {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+@media (max-width: 760px) {
+  .whatsapp-float {
+    right: 16px;
+    bottom: 18px;
+    max-width: calc(100vw - 32px);
+  }
+
+  .contact-card,
+  .quick-links {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+
+  footer {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
