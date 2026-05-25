@@ -78,10 +78,6 @@ body.single-section-view main > section:not(.route-active) {
   display: none !important;
 }
 
-body.single-section-view .site-footer:not(.route-active) {
-  display: none;
-}
-
 body.single-section-view .site-footer.route-active {
   min-height: calc(100vh - 79px);
   align-content: flex-start;
