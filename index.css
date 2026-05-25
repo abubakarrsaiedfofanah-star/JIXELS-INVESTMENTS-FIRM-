@@ -74,7 +74,7 @@ button {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: clamp(12px, 2.4vw, 28px);
+  gap: clamp(10px, 1.8vw, 24px);
   font-weight: 800;
 }
 
@@ -319,6 +319,74 @@ h1 {
   line-height: 1.1;
 }
 
+.electronics-page {
+  background: #ffffff;
+}
+
+.electronics-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) repeat(3, minmax(0, 0.72fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.electronics-grid article {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 14px 36px rgba(16, 24, 32, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.electronics-grid article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(16, 24, 32, 0.13);
+}
+
+.electronics-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+}
+
+.electronics-grid h3 {
+  margin: 0;
+  padding: 16px;
+  font-size: 1.14rem;
+  line-height: 1.12;
+}
+
+.electronics-feature {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-row: span 2;
+}
+
+.electronics-feature img {
+  height: 100%;
+  min-height: 420px;
+}
+
+.electronics-feature div {
+  padding: 18px;
+}
+
+.electronics-feature h3 {
+  padding: 0;
+  margin: 0 0 10px;
+  font-size: clamp(1.45rem, 2.4vw, 2.3rem);
+}
+
+.electronics-feature p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
 .management-page {
   background: #f9fbf7;
 }
@@ -362,6 +430,7 @@ h1 {
 .presentation-page,
 .problem-page,
 .what-page,
+.electronics-page,
 .outlets-page,
 .management-page,
 .stories-page {
@@ -860,6 +929,7 @@ footer p {
 
   .value-grid,
   .what-grid,
+  .electronics-grid,
   .problem-grid,
   .approach-list,
   .outlet-grid,
@@ -867,6 +937,15 @@ footer p {
   .quick-links,
   .presentation-grid {
     grid-template-columns: 1fr;
+  }
+
+  .electronics-feature {
+    grid-row: auto;
+  }
+
+  .electronics-feature img {
+    min-height: 260px;
+    height: auto;
   }
 
   .info-page.reverse img {
