@@ -5,9 +5,9 @@
     "vision-mission",
     "how-it-works",
     "what-we-do",
+    "phone-repairs",
     "electronics",
     "gallery",
-    "feedback",
     "leadership",
     "contact",
     "tenje-values",
@@ -15,13 +15,20 @@
     "community-impact",
     "success-stories",
     "partner-with-jixels",
+    "institution-collaborations",
     "outlets",
     "privacy",
   ]);
 
   const getRouteId = (hash) => {
     const id = hash.replace("#", "") || "home";
-    return id === "management" ? "leadership" : id;
+    if (id === "management") {
+      return "leadership";
+    }
+    if (id === "feedback") {
+      return "contact";
+    }
+    return id;
   };
 
   const showRoute = (id, shouldScroll = true) => {
@@ -30,11 +37,13 @@
     const routeSections = Array.from(document.querySelectorAll("main > section[id]"));
     const siteFooter = document.querySelector(".site-footer");
     const routeLinks = Array.from(document.querySelectorAll(".brand, a[href^='#']"));
+    const companySections = new Set(["about-us", "vision-mission"]);
 
     document.body.classList.toggle("single-section-view", !isHome);
 
     routeSections.forEach((section) => {
-      section.classList.toggle("route-active", !isHome && section.id === routeId);
+      const isCompanyRoute = routeId === "about-us" && companySections.has(section.id);
+      section.classList.toggle("route-active", !isHome && (section.id === routeId || isCompanyRoute));
     });
 
     if (siteFooter) {

@@ -1,6 +1,6 @@
 window.JixelsFooter = (() => {
   const whatsappNumber = "254713111666";
-  const defaultWhatsappText = "Hello Jixel Technology, I would like to learn more about your products, partnerships or support.";
+  const defaultWhatsappText = "Hello Jixels Technologies, I would like to learn more about your products, partnerships or support.";
 
   const buildWhatsappUrl = (message) => {
     const encodedMessage = encodeURIComponent(message);

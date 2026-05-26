@@ -13,7 +13,7 @@ window.JixelsBody = (() => {
         event.preventDefault();
         const formData = new FormData(form);
         const formType = form.dataset.formType || "Website contact";
-        const lines = [`${formType} from Jixel Technology website`];
+        const lines = [`${formType} from Jixels Technologies website`];
 
         ["name", "location", "interest", "contact", "message"].forEach((key) => {
           const value = String(formData.get(key) || "").trim();
@@ -58,16 +58,21 @@ window.JixelsBody = (() => {
       const target = Number(counter.dataset.count || 0);
       const suffix = counter.dataset.suffix || "";
       const duration = 1400;
-      const startedAt = performance.now();
+      const pause = 900;
+      let startedAt = performance.now();
 
       const tick = (now) => {
-        const progress = Math.min((now - startedAt) / duration, 1);
+        const elapsed = now - startedAt;
+        const progress = Math.min(elapsed / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3);
         counter.textContent = `${Math.round(target * eased).toLocaleString()}${suffix}`;
 
-        if (progress < 1) {
-          window.requestAnimationFrame(tick);
+        if (elapsed >= duration + pause) {
+          startedAt = now;
+          counter.textContent = `0${suffix}`;
         }
+
+        window.requestAnimationFrame(tick);
       };
 
       window.requestAnimationFrame(tick);
@@ -83,7 +88,11 @@ window.JixelsBody = (() => {
         if (!entry.isIntersecting) {
           return;
         }
+        if (entry.target.dataset.countStarted === "true") {
+          return;
+        }
 
+        entry.target.dataset.countStarted = "true";
         animateCounter(entry.target);
         observer.unobserve(entry.target);
       });

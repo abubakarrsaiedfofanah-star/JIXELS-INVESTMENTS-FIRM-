@@ -9,9 +9,7 @@
   gap: 22px;
   padding: 12px clamp(16px, 4vw, 56px);
   border-bottom: 1px solid var(--gold-line);
-  background:
-    linear-gradient(135deg, rgba(253, 186, 116, 0.16), rgba(91, 141, 239, 0.34)),
-    var(--blue);
+  background: #ffffff;
   backdrop-filter: blur(18px);
 }
 
@@ -28,7 +26,7 @@
 
 .main-nav a {
   padding: 8px 0;
-  color: #ffffff;
+  color: var(--ink);
   transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
@@ -41,7 +39,7 @@
 .nav-partner-with-us,
 .nav-partner-with-us.active {
   padding: 10px 14px;
-  border: 1px solid rgba(253, 186, 116, 0.78);
+  border: 1px solid rgba(245, 154, 22, 0.78);
   border-radius: 8px;
   color: var(--ink);
   background: var(--gold);
@@ -61,7 +59,7 @@
   border: 1px solid var(--gold-line);
   border-radius: 8px;
   background:
-    linear-gradient(135deg, rgba(253, 186, 116, 0.14), transparent 38%),
+    linear-gradient(135deg, rgba(245, 154, 22, 0.14), transparent 38%),
     #ffffff;
   cursor: pointer;
 }
@@ -108,6 +106,6 @@ body.single-section-view .site-footer.route-active {
 
   .main-nav a {
     padding: 13px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    border-top: 1px solid rgba(47, 155, 211, 0.12);
   }
 }

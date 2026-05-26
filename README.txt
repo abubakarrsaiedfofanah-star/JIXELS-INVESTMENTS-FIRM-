@@ -1,4 +1,4 @@
-Jixel Technology static website
+Jixels Technologies static website
 
 Upload these files and folders together:
 - index.html
