@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 22px;
-  padding: 12px clamp(16px, 4vw, 56px);
+  padding: 12px clamp(8px, 2vw, 24px);
   border-bottom: 1px solid var(--gold-line);
   background:
     linear-gradient(135deg, rgba(5, 5, 5, 0.16), rgba(47, 155, 211, 0.94)),
@@ -75,6 +75,16 @@
 }
 
 body.single-section-view main > section:not(.route-active) {
+  display: none !important;
+}
+
+body:not(.single-section-view) .management-page,
+body:not(.single-section-view) .gallery-page,
+body:not(.single-section-view) .highlights-page,
+body:not(.single-section-view) .privacy-page,
+body:not(.single-section-view) .institution-page,
+body:not(.single-section-view) .contact-page,
+body:not(.single-section-view) .partners-page {
   display: none !important;
 }
 

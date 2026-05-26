@@ -906,12 +906,29 @@ h1 {
   background: var(--blue-soft);
 }
 
-.management-page img {
+.management-page > img {
   width: min(100%, 1280px);
   margin-top: 34px;
   border-radius: 8px;
   box-shadow: var(--shadow);
   border: 1px solid var(--line);
+}
+
+.founder-message {
+  display: block;
+  width: min(100%, 1180px);
+  margin-top: 30px;
+}
+
+.founder-message img {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
+  border: 1px solid rgba(47, 155, 211, 0.18);
+  border-radius: 8px;
+  background: #eef2ff;
+  box-shadow: var(--shadow);
 }
 
 .directory-tools {
@@ -946,28 +963,43 @@ h1 {
 .team-directory {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 20px;
+  gap: clamp(14px, 2.5vw, 22px);
+  margin-top: 24px;
 }
 
 .team-directory article {
   position: relative;
+  display: grid;
+  justify-items: center;
   min-width: 0;
   overflow: hidden;
-  padding: 18px 18px 18px 22px;
-  border: 1px solid var(--line);
+  padding: clamp(18px, 3vw, 26px);
+  border: 1px solid rgba(47, 155, 211, 0.18);
   border-radius: 8px;
-  background: #ffffff;
+  background:
+    linear-gradient(180deg, rgba(47, 155, 211, 0.08), rgba(245, 154, 22, 0.08)),
+    #ffffff;
   box-shadow: 0 12px 28px rgba(16, 24, 32, 0.06);
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
 .team-directory article::before {
   position: absolute;
-  inset: 0 auto 0 0;
-  width: 5px;
+  inset: 0;
+  height: 5px;
   content: "";
-  background: var(--green);
+  background: linear-gradient(90deg, var(--gold), var(--blue), var(--ink));
+}
+
+.team-directory img {
+  width: clamp(112px, 15vw, 156px);
+  aspect-ratio: 1;
+  margin-bottom: 16px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eef2ff;
+  box-shadow: 0 14px 30px rgba(47, 155, 211, 0.18);
 }
 
 .team-directory article:hover {
@@ -983,22 +1015,25 @@ h1 {
 .team-directory h3 {
   margin: 0 0 8px;
   color: var(--ink);
-  font-size: 1.05rem;
+  font-size: clamp(1.08rem, 2vw, 1.32rem);
   line-height: 1.1;
+  text-align: center;
 }
 
 .team-directory p {
   display: inline-flex;
   max-width: 100%;
+  justify-content: center;
   margin: 0;
-  border-radius: 999px;
-  padding: 6px 10px;
-  color: #2f9bd3;
-  background: rgba(47, 155, 211, 0.1);
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #ffffff;
+  background: var(--blue);
   font-size: 0.9rem;
   font-weight: 800;
   line-height: 1.4;
   overflow-wrap: anywhere;
+  text-align: center;
 }
 
 .info-page h2,
@@ -1334,8 +1369,7 @@ h1 {
   line-height: 1.55;
 }
 
-.approach-page,
-.partners-page {
+.approach-page {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(280px, 1.08fr);
   gap: clamp(24px, 5vw, 64px);
@@ -1381,6 +1415,21 @@ h1 {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 24px;
+}
+
+.partners-page {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(24px, 5vw, 42px);
+  padding: clamp(56px, 8vw, 108px) clamp(16px, 5vw, 72px);
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(8, 22, 42, 0.22), rgba(47, 155, 211, 0.92)),
+    var(--blue);
+}
+
+.partners-page > div:first-child {
+  width: min(100%, 980px);
 }
 
 .partner-grid {
@@ -1438,12 +1487,11 @@ h1 {
 }
 
 .partner-logo-panel {
-  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(9, minmax(0, 1fr));
   gap: 10px;
   width: 100%;
-  margin-top: 6px;
+  margin-top: 0;
   padding: clamp(14px, 2vw, 20px);
   border: 1px solid rgba(245, 154, 22, 0.22);
   border-radius: 8px;
@@ -1461,16 +1509,16 @@ h1 {
 }
 
 .brand-partner-showcase {
-  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.95fr) minmax(220px, 0.95fr);
-  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.5vw, 22px);
   width: 100%;
-  margin-top: 20px;
+  margin-top: 0;
 }
 
 .brand-partner-showcase article {
   display: grid;
+  grid-template-rows: auto 1fr;
   min-width: 0;
   overflow: hidden;
   border: 1px solid rgba(245, 154, 22, 0.36);
@@ -1482,12 +1530,13 @@ h1 {
 
 .brand-partner-showcase img {
   width: 100%;
-  height: 320px;
-  object-fit: cover;
+  height: clamp(280px, 34vw, 430px);
+  object-fit: contain;
+  background: #f8fafc;
 }
 
 .brand-partner-showcase article:first-child img {
-  object-position: center top;
+  object-position: center;
 }
 
 .brand-partner-showcase div {
@@ -1508,7 +1557,6 @@ h1 {
 }
 
 .partner-proof {
-  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
@@ -2062,19 +2110,6 @@ h1 {
   line-height: 1.5;
 }
 
-.founder-page {
-  padding: clamp(30px, 6vw, 74px) clamp(12px, 4vw, 58px);
-  background: #ffffff;
-}
-
-.founder-page img {
-  width: min(100%, 1280px);
-  margin: 0 auto;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--line);
-}
-
 .whatsapp-float {
   position: fixed;
   right: 18px;
@@ -2132,6 +2167,36 @@ h1 {
   line-height: 1.55;
 }
 
+.contact-page {
+  padding: clamp(56px, 8vw, 108px) clamp(16px, 5vw, 72px);
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(5, 5, 5, 0.9), rgba(47, 155, 211, 0.82)),
+    var(--blue);
+}
+
+.contact-page .eyebrow,
+.contact-page .section-heading h2 {
+  color: #ffffff;
+}
+
+.contact-page .contact-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.92fr) minmax(320px, 1.08fr);
+  gap: clamp(22px, 5vw, 56px);
+  margin-top: 34px;
+}
+
+.contact-page .contact-panel,
+.contact-page .feedback-panel {
+  min-width: 0;
+  border: 1px solid rgba(245, 154, 22, 0.36);
+  border-radius: 8px;
+  padding: clamp(20px, 3vw, 30px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 44px rgba(5, 5, 5, 0.18);
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -2150,7 +2215,7 @@ footer {
 .contact-card {
   flex: 1 1 100%;
   display: grid;
-  grid-template-columns: minmax(220px, 0.9fr) minmax(280px, 1.1fr) minmax(0, 1.2fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(18px, 5vw, 48px);
   width: 100%;
   min-width: 0;
@@ -2398,6 +2463,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .contact-page .contact-card {
+    grid-template-columns: 1fr;
+  }
+
   .hero-media-panel {
     justify-self: start;
     width: 100%;
@@ -2457,6 +2526,7 @@ footer {
   .electronics-page,
   .access-flow-page,
   .gallery-page,
+  .contact-page,
   .feedback-page,
   .video-page,
   .outlets-page,
@@ -2603,7 +2673,7 @@ footer {
     height: auto;
   }
 
-  .management-page img {
+  .management-page > img {
     margin-top: 22px;
   }
 
