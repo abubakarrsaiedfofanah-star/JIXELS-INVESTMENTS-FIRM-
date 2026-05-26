@@ -10,7 +10,7 @@
   padding: 12px clamp(16px, 4vw, 56px);
   border-bottom: 1px solid var(--gold-line);
   background:
-    linear-gradient(135deg, rgba(253, 186, 116, 0.16), rgba(91, 141, 239, 0.18)),
+    linear-gradient(135deg, rgba(253, 186, 116, 0.16), rgba(91, 141, 239, 0.34)),
     var(--blue);
   backdrop-filter: blur(18px);
 }
