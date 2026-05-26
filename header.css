@@ -9,7 +9,9 @@
   gap: 22px;
   padding: 12px clamp(16px, 4vw, 56px);
   border-bottom: 1px solid var(--gold-line);
-  background: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(5, 5, 5, 0.16), rgba(47, 155, 211, 0.94)),
+    var(--blue);
   backdrop-filter: blur(18px);
 }
 
@@ -26,7 +28,7 @@
 
 .main-nav a {
   padding: 8px 0;
-  color: var(--ink);
+  color: #ffffff;
   transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
@@ -106,6 +108,6 @@ body.single-section-view .site-footer.route-active {
 
   .main-nav a {
     padding: 13px 0;
-    border-top: 1px solid rgba(47, 155, 211, 0.12);
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
   }
 }
