@@ -1336,7 +1336,7 @@ h1 {
   padding: 18px;
   border-radius: 8px;
   color: #ffffff;
-  background: linear-gradient(135deg, var(--gold-deep), var(--blue));
+  background: var(--blue);
   font-size: 1.08rem;
   font-weight: 900;
   text-align: center;
