@@ -47,6 +47,51 @@ window.JixelsBody = (() => {
     });
   };
 
+  const initCounters = () => {
+    const counters = Array.from(document.querySelectorAll("[data-count]"));
+
+    if (!counters.length) {
+      return;
+    }
+
+    const animateCounter = (counter) => {
+      const target = Number(counter.dataset.count || 0);
+      const suffix = counter.dataset.suffix || "";
+      const duration = 1400;
+      const startedAt = performance.now();
+
+      const tick = (now) => {
+        const progress = Math.min((now - startedAt) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        counter.textContent = `${Math.round(target * eased).toLocaleString()}${suffix}`;
+
+        if (progress < 1) {
+          window.requestAnimationFrame(tick);
+        }
+      };
+
+      window.requestAnimationFrame(tick);
+    };
+
+    if (!("IntersectionObserver" in window)) {
+      counters.forEach(animateCounter);
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.35 });
+
+    counters.forEach((counter) => observer.observe(counter));
+  };
+
   const initVideoReel = () => {
     const reel = document.querySelector("[data-video-reel]");
 
@@ -134,6 +179,7 @@ window.JixelsBody = (() => {
   const init = () => {
     initForms();
     initTeamSearch();
+    initCounters();
     initVideoReel();
   };
 

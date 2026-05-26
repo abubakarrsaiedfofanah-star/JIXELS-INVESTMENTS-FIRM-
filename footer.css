@@ -32,7 +32,7 @@ footer {
   padding: clamp(42px, 7vw, 82px) clamp(16px, 5vw, 72px) 10px;
   color: #ffffff;
   background:
-    linear-gradient(135deg, rgba(253, 186, 116, 0.18), rgba(37, 99, 235, 0.34)),
+    linear-gradient(135deg, rgba(253, 186, 116, 0.18), rgba(91, 141, 239, 0.18)),
     var(--blue);
 }
 
