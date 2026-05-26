@@ -8,6 +8,7 @@
     "phone-repairs",
     "electronics",
     "gallery",
+    "impact-stats",
     "leadership",
     "contact",
     "tenje-values",
@@ -38,16 +39,19 @@
     const siteFooter = document.querySelector(".site-footer");
     const routeLinks = Array.from(document.querySelectorAll(".brand, a[href^='#']"));
     const companySections = new Set(["about-us", "vision-mission"]);
+    const impactSections = new Set(["impact-stats", "community-impact"]);
 
     document.body.classList.toggle("single-section-view", !isHome);
+    document.body.classList.toggle("home-route", isHome);
 
     routeSections.forEach((section) => {
       const isCompanyRoute = routeId === "about-us" && companySections.has(section.id);
-      section.classList.toggle("route-active", !isHome && (section.id === routeId || isCompanyRoute));
+      const isImpactRoute = routeId === "community-impact" && impactSections.has(section.id);
+      section.classList.toggle("route-active", section.id === routeId || isCompanyRoute || isImpactRoute);
     });
 
     if (siteFooter) {
-      siteFooter.classList.toggle("route-active", !isHome && siteFooter.id === routeId);
+      siteFooter.classList.toggle("route-active", siteFooter.id === routeId);
     }
 
     routeLinks.forEach((link) => {

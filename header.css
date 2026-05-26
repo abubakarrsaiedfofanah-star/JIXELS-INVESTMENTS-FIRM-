@@ -83,8 +83,14 @@ body:not(.single-section-view) .gallery-page,
 body:not(.single-section-view) .highlights-page,
 body:not(.single-section-view) .privacy-page,
 body:not(.single-section-view) .institution-page,
-body:not(.single-section-view) .contact-page,
-body:not(.single-section-view) .partners-page {
+body:not(.single-section-view) .contact-page {
+  display: none !important;
+}
+
+body.home-route #impact-stats,
+body.home-route #community-impact,
+body.home-route #partner-with-jixels .brand-partner-showcase,
+body.home-route #partner-with-jixels .partner-logo-panel {
   display: none !important;
 }
 
