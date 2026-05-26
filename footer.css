@@ -34,6 +34,10 @@ footer {
   background: #000000;
 }
 
+.site-footer {
+  background: #000000;
+}
+
 .contact-card {
   flex: 1 1 100%;
   display: grid;
