@@ -14,6 +14,7 @@
     "tenje-values",
     "problem",
     "community-impact",
+    "impact-gallery",
     "success-stories",
     "partner-with-jixels",
     "institution-collaborations",

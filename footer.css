@@ -51,7 +51,7 @@ footer {
   border-radius: 8px;
   padding: clamp(20px, 4vw, 34px);
   background:
-    linear-gradient(135deg, rgba(47, 155, 211, 0.24), rgba(245, 154, 22, 0.12)),
+    linear-gradient(135deg, rgba(74, 163, 193, 0.24), rgba(245, 154, 22, 0.12)),
     rgba(255, 255, 255, 0.06);
 }
 
