@@ -10,8 +10,8 @@
   padding: 12px clamp(16px, 4vw, 56px);
   border-bottom: 1px solid var(--gold-line);
   background:
-    linear-gradient(135deg, rgba(253, 186, 116, 0.16), rgba(15, 76, 189, 0.34)),
-    var(--ink);
+    linear-gradient(135deg, rgba(253, 186, 116, 0.16), rgba(37, 99, 235, 0.34)),
+    var(--blue);
   backdrop-filter: blur(18px);
 }
 
@@ -71,7 +71,7 @@
   width: 20px;
   height: 2px;
   margin: 5px auto;
-  background: var(--ink);
+  background: var(--blue);
 }
 
 body.single-section-view main > section:not(.route-active) {
