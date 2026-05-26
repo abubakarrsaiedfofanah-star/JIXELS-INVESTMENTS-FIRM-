@@ -1,4 +1,4 @@
-﻿window.JixelsBody = (() => {
+window.JixelsBody = (() => {
   const buildWhatsappUrl = (message) => {
     if (window.JixelsFooter && window.JixelsFooter.buildWhatsappUrl) {
       return window.JixelsFooter.buildWhatsappUrl(message);
@@ -13,7 +13,7 @@
         event.preventDefault();
         const formData = new FormData(form);
         const formType = form.dataset.formType || "Website contact";
-        const lines = [`${formType} from Jixels website`];
+        const lines = [`${formType} from Jixel Technology website`];
 
         ["name", "location", "interest", "contact", "message"].forEach((key) => {
           const value = String(formData.get(key) || "").trim();
