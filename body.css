@@ -400,6 +400,67 @@ h1 {
   font-weight: 900;
 }
 
+.business-page,
+.service-promise-page {
+  padding: clamp(56px, 8vw, 108px) clamp(16px, 5vw, 72px);
+  background:
+    linear-gradient(135deg, rgba(47, 155, 211, 0.08), rgba(245, 154, 22, 0.1)),
+    #ffffff;
+}
+
+.business-grid,
+.promise-grid,
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.business-grid article,
+.promise-grid article,
+.market-grid article {
+  min-width: 0;
+  border: 1px solid rgba(47, 155, 211, 0.18);
+  border-radius: 8px;
+  padding: clamp(20px, 3vw, 28px);
+  background: #ffffff;
+  box-shadow: 0 14px 36px rgba(16, 24, 32, 0.07);
+}
+
+.business-grid span {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 8px;
+  color: #ffffff;
+  background: var(--blue);
+  font-weight: 900;
+}
+
+.business-grid article:nth-child(even) span {
+  color: var(--ink);
+  background: var(--gold);
+}
+
+.business-grid h3,
+.promise-grid h3,
+.market-grid h3 {
+  margin: 16px 0 10px;
+  color: var(--ink);
+  font-size: 1.22rem;
+  line-height: 1.12;
+}
+
+.business-grid p,
+.promise-grid p,
+.market-grid p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.55;
+}
+
 .what-page {
   background: var(--gold-soft);
 }
@@ -459,6 +520,296 @@ h1 {
 .what-grid article:nth-child(3) .service-number {
   color: #ffffff;
   background: var(--ink);
+}
+
+.customer-page,
+.agent-network-page,
+.market-page {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+  gap: clamp(24px, 5vw, 64px);
+  align-items: center;
+  padding: clamp(56px, 8vw, 108px) clamp(16px, 5vw, 72px);
+}
+
+.customer-page {
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(5, 5, 5, 0.86), rgba(47, 155, 211, 0.88)),
+    var(--blue);
+}
+
+.customer-page .eyebrow,
+.agent-network-page .eyebrow,
+.market-page .eyebrow {
+  color: var(--gold);
+}
+
+.customer-page h2,
+.agent-network-page h2,
+.market-page h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4.4rem);
+  line-height: 1;
+}
+
+.customer-page p,
+.agent-network-page p,
+.market-page p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(1rem, 1.6vw, 1.16rem);
+  line-height: 1.58;
+}
+
+.journey-list,
+.network-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.journey-list article,
+.network-grid article {
+  min-width: 0;
+  border: 1px solid rgba(245, 154, 22, 0.34);
+  border-radius: 8px;
+  padding: clamp(18px, 3vw, 24px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.journey-list strong,
+.network-grid span {
+  display: block;
+  color: var(--gold);
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.journey-list p,
+.network-grid p {
+  margin: 8px 0 0;
+  font-size: 1rem;
+}
+
+.service-promise-page {
+  background:
+    linear-gradient(135deg, rgba(245, 154, 22, 0.12), rgba(47, 155, 211, 0.08)),
+    #ffffff;
+}
+
+.category-page,
+.repair-process-page {
+  padding: clamp(56px, 8vw, 108px) clamp(16px, 5vw, 72px);
+  background: #ffffff;
+}
+
+.category-grid,
+.repair-process-grid,
+.standards-grid,
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.category-grid article,
+.repair-process-grid article,
+.standards-grid article,
+.coverage-grid article {
+  min-width: 0;
+  border: 1px solid rgba(47, 155, 211, 0.18);
+  border-radius: 8px;
+  padding: clamp(20px, 3vw, 28px);
+  background: #ffffff;
+  box-shadow: 0 14px 36px rgba(16, 24, 32, 0.07);
+}
+
+.category-grid article:nth-child(odd),
+.repair-process-grid article:nth-child(even),
+.standards-grid article:nth-child(odd),
+.coverage-grid article:nth-child(even) {
+  border-color: rgba(245, 154, 22, 0.38);
+  background:
+    linear-gradient(135deg, rgba(245, 154, 22, 0.1), rgba(47, 155, 211, 0.05)),
+    #ffffff;
+}
+
+.category-grid h3,
+.repair-process-grid h3,
+.standards-grid h3,
+.coverage-grid h3 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: 1.2rem;
+  line-height: 1.12;
+}
+
+.category-grid p,
+.repair-process-grid p,
+.standards-grid p,
+.coverage-grid p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.58;
+}
+
+.repair-process-grid span {
+  display: inline-flex;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: #ffffff;
+  background: var(--blue);
+  font-weight: 900;
+}
+
+.repair-process-grid article:nth-child(even) span {
+  color: var(--ink);
+  background: var(--gold);
+}
+
+.paygo-page,
+.standards-page {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+  gap: clamp(24px, 5vw, 64px);
+  align-items: center;
+  padding: clamp(56px, 8vw, 108px) clamp(16px, 5vw, 72px);
+  color: #ffffff;
+}
+
+.paygo-page {
+  background:
+    linear-gradient(135deg, rgba(47, 155, 211, 0.92), rgba(5, 5, 5, 0.84)),
+    var(--blue);
+}
+
+.standards-page {
+  background:
+    linear-gradient(135deg, rgba(5, 5, 5, 0.9), rgba(47, 155, 211, 0.76)),
+    var(--ink);
+}
+
+.paygo-page .eyebrow,
+.standards-page .eyebrow {
+  color: var(--gold);
+}
+
+.paygo-page h2,
+.standards-page h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4.4rem);
+  line-height: 1;
+}
+
+.paygo-page p,
+.standards-page p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(1rem, 1.6vw, 1.16rem);
+  line-height: 1.58;
+}
+
+.paygo-steps {
+  display: grid;
+  gap: 12px;
+}
+
+.paygo-steps article {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 6px 14px;
+  min-width: 0;
+  border: 1px solid rgba(245, 154, 22, 0.34);
+  border-radius: 8px;
+  padding: clamp(18px, 3vw, 24px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.paygo-steps span {
+  grid-row: span 2;
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 8px;
+  color: var(--ink);
+  background: var(--gold);
+  font-weight: 900;
+}
+
+.paygo-steps strong {
+  color: #ffffff;
+  font-size: 1.08rem;
+}
+
+.paygo-steps p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.promise-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.promise-grid article {
+  border-left: 5px solid var(--blue);
+}
+
+.promise-grid article:nth-child(even) {
+  border-left-color: var(--gold);
+}
+
+.agent-network-page {
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(47, 155, 211, 0.9), rgba(5, 5, 5, 0.86)),
+    var(--blue);
+}
+
+.network-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.network-grid article {
+  min-height: 180px;
+  align-content: start;
+}
+
+.market-page {
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(5, 5, 5, 0.92), rgba(47, 155, 211, 0.72)),
+    var(--ink);
+}
+
+.market-grid {
+  grid-template-columns: 1fr;
+  margin-top: 0;
+}
+
+.market-grid article {
+  color: var(--ink);
+}
+
+.market-grid h3 {
+  margin-top: 0;
+}
+
+.standards-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 0;
+}
+
+.standards-grid article {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.standards-grid h3 {
+  color: #ffffff;
+}
+
+.standards-grid p {
+  color: rgba(255, 255, 255, 0.76);
 }
 
 .repairs-page {
@@ -2451,6 +2802,11 @@ footer {
   .repairs-page,
   .model-page,
   .approach-page,
+  .customer-page,
+  .paygo-page,
+  .agent-network-page,
+  .market-page,
+  .standards-page,
   .partners-page,
   .institution-page,
   .access-flow-page,
@@ -2521,8 +2877,12 @@ footer {
   .highlights-page,
   .vision-page,
   .problem-page,
+  .business-page,
+  .category-page,
   .what-page,
   .repairs-page,
+  .repair-process-page,
+  .service-promise-page,
   .electronics-page,
   .access-flow-page,
   .gallery-page,
@@ -2539,6 +2899,15 @@ footer {
   .about-us-page,
   .model-page,
   .approach-page,
+  .business-page,
+  .category-page,
+  .customer-page,
+  .paygo-page,
+  .service-promise-page,
+  .repair-process-page,
+  .agent-network-page,
+  .market-page,
+  .standards-page,
   .partners-page,
   .institution-page,
   .csr-page,
@@ -2555,6 +2924,11 @@ footer {
   .approach-page h2,
   .partners-page h2,
   .institution-copy h2,
+  .customer-page h2,
+  .paygo-page h2,
+  .agent-network-page h2,
+  .market-page h2,
+  .standards-page h2,
   .access-flow-copy h2,
   .video-page h2,
   .highlights-page h2,
@@ -2599,6 +2973,13 @@ footer {
   .value-grid,
   .vision-grid,
   .stats-grid,
+  .business-grid,
+  .category-grid,
+  .repair-process-grid,
+  .promise-grid,
+  .market-grid,
+  .standards-grid,
+  .coverage-grid,
   .repair-showcase,
   .impact-gallery,
   .team-directory,
@@ -2617,6 +2998,9 @@ footer {
   .brand-partner-showcase,
   .institution-gallery,
   .institution-points,
+  .journey-list,
+  .paygo-steps,
+  .network-grid,
   .access-flow-steps,
   .partner-proof,
   .privacy-grid {
