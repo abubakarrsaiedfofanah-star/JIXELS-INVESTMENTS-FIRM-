@@ -544,6 +544,76 @@ h1 {
   line-height: 1.55;
 }
 
+.access-flow-page {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(24px, 5vw, 64px);
+  align-items: center;
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(253, 186, 116, 0.18), rgba(37, 99, 235, 0.28)),
+    var(--blue);
+}
+
+.access-flow-copy {
+  max-width: 680px;
+}
+
+.access-flow-copy h2 {
+  margin: 0;
+  font-size: clamp(2.35rem, 5vw, 5rem);
+  line-height: 0.96;
+  text-wrap: balance;
+}
+
+.access-flow-copy p:not(.eyebrow) {
+  max-width: 620px;
+  margin: 18px 0 24px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.access-flow-steps {
+  display: grid;
+  gap: 14px;
+}
+
+.access-flow-steps article {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px 16px;
+  align-items: start;
+  min-width: 0;
+  padding: clamp(18px, 3vw, 26px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.access-flow-steps span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 8px;
+  color: var(--ink);
+  background: var(--gold);
+  font-weight: 900;
+}
+
+.access-flow-steps h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.access-flow-steps p {
+  grid-column: 2;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.55;
+}
+
 .video-page {
   color: #ffffff;
   background:
@@ -1969,6 +2039,7 @@ footer {
   .model-page,
   .approach-page,
   .partners-page,
+  .access-flow-page,
   .video-layout,
   .csr-page {
     grid-template-columns: 1fr;
@@ -2034,6 +2105,7 @@ footer {
   .problem-page,
   .what-page,
   .electronics-page,
+  .access-flow-page,
   .gallery-page,
   .feedback-page,
   .video-page,
@@ -2061,6 +2133,7 @@ footer {
   .model-copy h2,
   .approach-page h2,
   .partners-page h2,
+  .access-flow-copy h2,
   .video-page h2,
   .highlights-page h2,
   .csr-copy h2 {
@@ -2084,6 +2157,7 @@ footer {
   .feedback-form,
   .team-form,
   .partner-grid,
+  .access-flow-steps,
   .partner-proof,
   .privacy-grid {
     grid-template-columns: 1fr;
