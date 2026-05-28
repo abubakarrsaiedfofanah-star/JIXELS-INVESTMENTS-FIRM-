@@ -842,7 +842,7 @@ h1 {
 
 .plan-grid article,
 .trust-grid article,
-.faq-grid details {
+.faq-grid article {
   min-width: 0;
   border: 1px solid rgba(51, 157, 209, 0.2);
   border-radius: 8px;
@@ -894,15 +894,12 @@ h1 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.faq-grid summary {
-  cursor: pointer;
+.faq-grid h3 {
+  margin: 0 0 10px;
   color: var(--ink);
+  font-size: 1.1rem;
   font-weight: 900;
   line-height: 1.35;
-}
-
-.faq-grid details[open] summary {
-  margin-bottom: 12px;
 }
 
 .promise-grid {
