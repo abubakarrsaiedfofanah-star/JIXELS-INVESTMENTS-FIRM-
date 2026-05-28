@@ -674,7 +674,6 @@ h1 {
   background: #ffffff;
 }
 
-.category-grid,
 .repair-process-grid,
 .standards-grid,
 .coverage-grid {
@@ -832,6 +831,14 @@ h1 {
 .faq-grid {
   display: grid;
   gap: 14px;
+  margin-top: 34px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 340px));
+  gap: 14px;
+  justify-content: center;
   margin-top: 34px;
 }
 
