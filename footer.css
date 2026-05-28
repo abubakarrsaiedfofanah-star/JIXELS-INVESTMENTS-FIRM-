@@ -146,7 +146,7 @@ footer {
 
 .footer-brand-panel img {
   width: min(100%, 240px);
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .footer-brand-panel a {
