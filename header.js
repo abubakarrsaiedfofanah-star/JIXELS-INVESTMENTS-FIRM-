@@ -48,7 +48,10 @@
     routeSections.forEach((section) => {
       const isCompanyRoute = routeId === "about-us" && companySections.has(section.id);
       const isImpactRoute = routeId === "community-impact" && impactSections.has(section.id);
-      section.classList.toggle("route-active", section.id === routeId || isCompanyRoute || isImpactRoute);
+      const isPartnerRoute =
+        routeId === "partner-with-jixels" &&
+        (section.id === "partner-with-jixels" || section.id === "institution-collaborations");
+      section.classList.toggle("route-active", section.id === routeId || isCompanyRoute || isImpactRoute || isPartnerRoute);
     });
 
     if (siteFooter) {
