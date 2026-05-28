@@ -1,10 +1,9 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   flex: 0 0 auto;
   width: auto;
-  max-width: clamp(260px, 27vw, 390px);
+  max-width: clamp(150px, 15vw, 220px);
   padding: 0;
   border: 0;
   background: transparent;
@@ -13,35 +12,20 @@
 
 .brand img {
   display: block;
-  width: clamp(76px, 8vw, 112px);
+  width: clamp(150px, 15vw, 220px);
   height: auto;
   max-width: 100%;
   object-fit: contain;
   object-position: left center;
 }
 
-.brand span {
-  color: #ffffff;
-  font-size: clamp(1.25rem, 2vw, 2.05rem);
-  font-weight: 1000;
-  line-height: 0.95;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
 @media (max-width: 760px) {
   .brand {
-    gap: 8px;
-    max-width: min(calc(100vw - 86px), 260px);
+    max-width: min(calc(100vw - 86px), 178px);
   }
 
   .brand img {
-    width: 58px;
+    width: min(calc(100vw - 86px), 178px);
     height: auto;
-  }
-
-  .brand span {
-    font-size: clamp(1rem, 4.8vw, 1.35rem);
-    white-space: normal;
   }
 }
