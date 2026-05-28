@@ -2133,10 +2133,10 @@ h1 {
 
 .institution-page {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1.2fr);
-  gap: clamp(24px, 5vw, 64px);
+  grid-template-columns: minmax(0, 0.86fr) minmax(320px, 1.14fr);
+  gap: clamp(20px, 4vw, 42px);
   align-items: center;
-  padding: clamp(56px, 8vw, 108px) clamp(16px, 5vw, 72px);
+  padding: clamp(42px, 6vw, 76px) clamp(16px, 4vw, 56px);
   color: #ffffff;
   background: var(--blue);
 }
@@ -2147,23 +2147,23 @@ h1 {
 
 .institution-copy h2 {
   margin: 0;
-  font-size: clamp(2rem, 5vw, 4.4rem);
+  font-size: clamp(1.9rem, 4.2vw, 3.7rem);
   line-height: 1;
   text-wrap: balance;
 }
 
 .institution-copy p:not(.eyebrow) {
-  max-width: 620px;
+  max-width: 560px;
   color: rgba(255, 255, 255, 0.82);
-  font-size: 1.05rem;
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: 1.58;
 }
 
 .institution-points {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
-  margin-top: 22px;
+  margin-top: 16px;
 }
 
 .institution-points span {
@@ -2194,7 +2194,7 @@ h1 {
   align-items: center;
   justify-content: center;
   min-width: 0;
-  height: clamp(460px, 48vw, 680px);
+  height: clamp(320px, 34vw, 480px);
   margin: 0;
   overflow: hidden;
   border: 1px solid rgba(245, 154, 22, 0.42);
@@ -2206,7 +2206,8 @@ h1 {
 .institution-gallery img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 6px;
   background: #ffffff;
   border-radius: 8px;
 }
@@ -3189,7 +3190,7 @@ footer {
   .impact-extra-grid img,
   .brand-partner-showcase img,
   .institution-gallery figure {
-    height: 320px;
+    height: 260px;
   }
 
   .device-media {
