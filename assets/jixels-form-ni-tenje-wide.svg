@@ -1,16 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1861 345" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 520" role="img" aria-labelledby="title desc">
   <title id="title">Jixels Form Ni Tenje</title>
-  <desc id="desc">Wide Jixels Form Ni Tenje brand logo with phone mark, orange accent and blue panel.</desc>
-  <rect width="1861" height="345" fill="#ffffff"/>
-  <path d="M1076 0h785v345h-593z" fill="#2f9bd3"/>
-  <g transform="translate(18 18)">
+  <desc id="desc">Jixels Form Ni Tenje logo with phone mark, orange sun arc and blue Jixels wordmark.</desc>
+  <rect width="1120" height="520" fill="#ffffff"/>
+  <g transform="translate(10 8) scale(1.08)">
     <path d="M88 115V28c0-16 14-28 31-28h101c17 0 31 12 31 28v67h-22V50H110v221h35c-20 9-39 13-57 14V139c-23 10-43 24-60 41-20 19-30 39-28 59 3 23 25 37 66 42 34 4 72 0 113-11l-8 19c-47 9-89 10-125 3-37-7-58-23-63-48-5-24 8-51 39-80 18-17 40-33 66-49z" fill="#11110d"/>
     <rect x="150" y="24" width="39" height="10" rx="5" fill="#ffffff"/>
-    <path d="M0 267c9 20 40 30 94 29 34 0 70-5 108-14l-32 13c-42 15-81 21-116 18-39-3-62-16-68-38-9-34 25-77 101-130v22c-62 42-91 75-87 100z" fill="#2f9bd3"/>
+    <path d="M0 267c9 20 40 30 94 29 34 0 70-5 108-14l-32 13c-42 15-81 21-116 18-39-3-62-16-68-38-9-34 25-77 101-130v22c-62 42-91 75-87 100z" fill="#339dd1"/>
     <path d="M112 103c69-26 134-28 196-6 17 6 32 13 45 22-55-12-107-12-155 1-33 9-63 22-89 38z" fill="#f59a16"/>
     <path d="M166 84l8-18 8 29zm28-8 5-20 10 30zm28-5 1-22 13 33zm28 2-2-23 17 31zm29 7 4-22 10 34zm29 11 7-19 7 31z" fill="#f59a16"/>
-    <path d="M115 228h66l23-118h-52zm83 0h61l23-118h-61zm92 0h68l13-63 40 63h66l-65-84 83-34h-72l-41 22 4-22h-61zm209 0h130l10-50H568l3-16h64l9-46H515zm158 0h70l23-118h-70zm100 0h117c31 0 52-17 58-48 6-29-8-44-43-44h-44l2-12h88l10-48H825c-30 0-51 17-57 48-6 30 8 45 43 45h44l-2 12h-86z" fill="#2f9bd3"/>
+    <path d="M115 228h66l23-118h-52zm83 0h61l23-118h-61zm92 0h68l13-63 40 63h66l-65-84 83-34h-72l-41 22 4-22h-61zm209 0h130l10-50H568l3-16h64l9-46H515zm158 0h70l23-118h-70zm100 0h117c31 0 52-17 58-48 6-29-8-44-43-44h-44l2-12h88l10-48H825c-30 0-51 17-57 48-6 30 8 45 43 45h44l-2 12h-86z" fill="#339dd1"/>
     <path d="M239 245c61-3 117-2 168 1 35 2 70 4 105 7-81 8-169 9-264 3z" fill="#f59a16"/>
   </g>
-  <text x="545" y="305" font-family="Arial, Helvetica, sans-serif" font-size="96" font-weight="800" fill="#050505">Form Ni Tenje</text>
+  <text x="355" y="450" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="800" fill="#050505">Form Ni Tenje</text>
 </svg>

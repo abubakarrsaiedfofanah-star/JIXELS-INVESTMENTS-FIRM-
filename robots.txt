@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://jixelsinvestmentsfirm.kesug.com/sitemap.xml
+Sitemap: https://www.jixels.com/sitemap.xml

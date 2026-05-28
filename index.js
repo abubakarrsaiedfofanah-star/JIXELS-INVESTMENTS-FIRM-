@@ -1,4 +1,12 @@
 const initializePage = () => {
+  document.querySelectorAll("img").forEach((image, index) => {
+    image.decoding = "async";
+
+    if (index > 0) {
+      image.loading = "lazy";
+    }
+  });
+
   window.JixelsFooter?.init();
   window.JixelsHeader?.init();
   window.JixelsBody?.init();

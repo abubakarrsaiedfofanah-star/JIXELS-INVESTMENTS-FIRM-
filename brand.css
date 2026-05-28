@@ -1,7 +1,9 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  width: clamp(300px, 34vw, 520px);
+  flex: 0 0 auto;
+  width: auto;
+  max-width: clamp(150px, 15vw, 220px);
   padding: 0;
   border: 0;
   background: transparent;
@@ -9,18 +11,21 @@
 }
 
 .brand img {
-  width: 100%;
-  height: 84px;
+  display: block;
+  width: clamp(150px, 15vw, 220px);
+  height: auto;
+  max-width: 100%;
   object-fit: contain;
   object-position: left center;
 }
 
 @media (max-width: 760px) {
   .brand {
-    width: min(100%, 330px);
+    max-width: min(calc(100vw - 86px), 178px);
   }
 
   .brand img {
-    height: 62px;
+    width: min(calc(100vw - 86px), 178px);
+    height: auto;
   }
 }

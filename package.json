@@ -1,0 +1,19 @@
+{
+  "name": "jixels-technologies-static-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static website for Jixels Technologies, ready for Vercel deployment.",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "serve": "python -m http.server 8080",
+    "check": "git status --short",
+    "vercel-build": "echo Static site - no build step required"
+  },
+  "keywords": [
+    "jixels",
+    "static-site",
+    "vercel"
+  ],
+  "author": "Jixels Technologies",
+  "license": "UNLICENSED"
+}

@@ -12,7 +12,7 @@
   padding: 0 16px;
   color: var(--ink);
   background: var(--gold);
-  box-shadow: 0 14px 30px rgba(16, 24, 32, 0.24);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
   font-weight: 900;
 }
 
@@ -50,9 +50,6 @@ footer {
   border: 1px solid rgba(245, 154, 22, 0.38);
   border-radius: 8px;
   padding: clamp(20px, 4vw, 34px);
-  background:
-    linear-gradient(135deg, rgba(74, 163, 193, 0.24), rgba(245, 154, 22, 0.12)),
-    rgba(255, 255, 255, 0.06);
 }
 
 .footer-invitation .eyebrow {
@@ -148,7 +145,7 @@ footer {
 }
 
 .footer-brand-panel img {
-  width: min(100%, 380px);
+  width: min(100%, 240px);
   border-radius: 8px;
 }
 
@@ -268,59 +265,6 @@ footer {
   font-size: 0.94rem;
   font-weight: 800;
   text-align: left;
-}
-
-.developer-credit {
-  flex: 0 1 auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 10px;
-  max-width: 100%;
-  padding: 2px 0 0;
-  color: #ffffff;
-  background: transparent;
-  text-align: left;
-}
-
-.developer-credit div {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
-}
-
-.developer-credit img {
-  width: 54px;
-  height: 54px;
-  object-fit: cover;
-  border-radius: 8px;
-  flex: 0 0 auto;
-}
-
-.developer-credit span {
-  font-size: 0.78rem;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.developer-credit a {
-  display: inline-flex;
-  max-width: 100%;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  color: var(--gold);
-  background: transparent;
-  font-size: 0.95rem;
-  font-weight: 900;
-  overflow-wrap: anywhere;
-}
-
-.developer-credit a:hover,
-.developer-credit a:focus-visible {
-  color: #ffffff;
 }
 
 .footer-line {

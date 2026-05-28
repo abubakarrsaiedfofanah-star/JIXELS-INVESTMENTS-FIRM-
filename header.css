@@ -6,19 +6,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 22px;
-  padding: 12px clamp(8px, 2vw, 24px);
+  gap: clamp(14px, 2vw, 28px);
+  min-height: 84px;
+  padding: 6px clamp(12px, 2vw, 24px);
   border-bottom: 1px solid var(--gold-line);
-  background:
-    linear-gradient(135deg, rgba(5, 5, 5, 0.16), rgba(74, 163, 193, 0.94)),
-    var(--blue);
+  background: var(--blue);
   backdrop-filter: blur(18px);
 }
 
 .main-nav {
   display: flex;
   align-items: center;
-  gap: clamp(10px, 1.8vw, 24px);
+  justify-content: flex-end;
+  flex: 1 1 auto;
+  gap: clamp(10px, 1.35vw, 22px);
+  min-width: 0;
+  font-size: clamp(0.88rem, 1vw, 1.05rem);
   font-weight: 800;
 }
 
@@ -40,7 +43,7 @@
 
 .nav-partner-with-us,
 .nav-partner-with-us.active {
-  padding: 10px 14px;
+  padding: 10px 12px;
   border: 1px solid rgba(245, 154, 22, 0.78);
   border-radius: 8px;
   color: var(--ink);
@@ -79,11 +82,11 @@ body.single-section-view main > section:not(.route-active) {
 }
 
 body:not(.single-section-view) .management-page,
-body:not(.single-section-view) .gallery-page,
 body:not(.single-section-view) .highlights-page,
 body:not(.single-section-view) .impact-extra-page,
 body:not(.single-section-view) .privacy-page,
 body:not(.single-section-view) .contact-page,
+body:not(.single-section-view) .device-page,
 body:not(.single-section-view) .partners-page {
   display: none !important;
 }
@@ -94,9 +97,19 @@ body.single-section-view .site-footer.route-active {
 }
 
 @media (max-width: 760px) {
+  body {
+    padding-top: 108px;
+  }
+
   .site-header {
-    align-items: flex-start;
-    flex-wrap: wrap;
+    position: fixed;
+    right: 0;
+    left: 0;
+    align-items: center;
+    flex-wrap: nowrap;
+    min-height: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
   .menu-toggle {
@@ -104,12 +117,22 @@ body.single-section-view .site-footer.route-active {
   }
 
   .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
     display: none;
     width: 100%;
+    max-height: calc(100vh - 108px);
+    overflow-y: auto;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    padding-top: 10px;
+    padding: 8px 16px 12px;
+    border-top: 1px solid rgba(245, 154, 22, 0.42);
+    border-bottom: 1px solid rgba(245, 154, 22, 0.42);
+    background: var(--blue);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18);
   }
 
   .main-nav.open {
