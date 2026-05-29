@@ -203,7 +203,10 @@ window.JixelsBody = (() => {
 
       buttons.forEach((item) => item.classList.toggle("is-active", item === button));
       title.textContent = label;
-      frame.src = `https://www.google.com/maps?q=${encodedQuery}&output=embed`;
+      const embedUrl = `https://www.google.com/maps?q=${encodedQuery}&output=embed`;
+      if (frame.src !== embedUrl) {
+        frame.src = embedUrl;
+      }
       link.href = `https://www.google.com/maps/search/?api=1&query=${encodedQuery}`;
       panel.hidden = false;
       panel.scrollIntoView({ block: "nearest", behavior: "smooth" });

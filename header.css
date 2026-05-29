@@ -98,39 +98,48 @@ body.single-section-view .site-footer.route-active {
 
 @media (max-width: 760px) {
   body {
-    padding-top: 108px;
+    padding-top: 76px;
   }
 
   .site-header {
     position: fixed;
+    z-index: 1000;
     right: 0;
     left: 0;
     align-items: center;
     flex-wrap: nowrap;
-    min-height: 0;
+    min-height: 76px;
     padding-top: 8px;
     padding-bottom: 8px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
   }
 
   .menu-toggle {
-    display: block;
+    display: grid;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border-color: rgba(245, 154, 22, 0.95);
+    background: #ffffff;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
   }
 
   .main-nav {
     position: fixed;
-    top: 84px;
+    top: 76px;
     right: 0;
     left: 0;
     display: none;
-    z-index: 40;
+    z-index: 999;
     width: 100vw;
     max-width: none;
-    max-height: calc(100dvh - 84px);
+    max-height: calc(100dvh - 76px);
     overflow-y: auto;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    padding: 10px clamp(16px, 5vw, 24px) 18px;
+    padding: 10px clamp(16px, 5vw, 24px) calc(22px + env(safe-area-inset-bottom));
     border-top: 1px solid rgba(245, 154, 22, 0.42);
     border-bottom: 1px solid rgba(245, 154, 22, 0.42);
     background: #050505;
@@ -144,11 +153,11 @@ body.single-section-view .site-footer.route-active {
   .main-nav a {
     display: block;
     width: 100%;
-    min-height: 50px;
-    padding: 15px 4px;
+    min-height: 54px;
+    padding: 16px 6px;
     border-top: 1px solid rgba(255, 255, 255, 0.16);
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 1.05rem;
     line-height: 1.2;
   }
 
