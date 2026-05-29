@@ -750,6 +750,13 @@ h1 {
   line-height: 1.58;
 }
 
+.outlets-page .coverage-grid {
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  width: min(100%, 1180px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .repair-process-grid span {
   display: inline-flex;
   margin-bottom: 12px;
