@@ -2290,6 +2290,10 @@ h1 {
   display: none;
 }
 
+body:not(.single-section-view) .outlet-map-panel {
+  display: none !important;
+}
+
 .outlet-map-panel span {
   color: var(--blue);
   font-size: 0.78rem;
@@ -2311,7 +2315,7 @@ h1 {
 
 .outlet-map-panel iframe {
   width: 100%;
-  height: clamp(280px, 42vw, 420px);
+  height: clamp(220px, 30vw, 320px);
   border: 0;
   border-radius: 8px;
 }
