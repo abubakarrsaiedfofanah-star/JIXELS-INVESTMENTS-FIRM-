@@ -63,7 +63,14 @@ section {
   padding: clamp(34px, 5vw, 72px) clamp(16px, 5vw, 72px) clamp(26px, 4vw, 46px);
   overflow: hidden;
   color: #ffffff;
-  background: var(--blue);
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.62), rgba(5, 5, 5, 0.18)),
+    url("assets/hero-mogo-van.jpeg") center / cover no-repeat;
+}
+
+.intro-panel > * {
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow {
