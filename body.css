@@ -472,13 +472,14 @@ h1 {
 
 .device-grid {
   display: grid;
-  gap: clamp(26px, 5vw, 46px);
+  gap: clamp(24px, 4vw, 40px);
   margin-top: 34px;
 }
 
 .product-group {
   display: grid;
   gap: 16px;
+  min-width: 0;
   padding-top: clamp(18px, 3vw, 28px);
   border-top: 1px solid rgba(51, 157, 209, 0.18);
 }
@@ -524,7 +525,7 @@ h1 {
 
 .product-group-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
   align-items: stretch;
 }
