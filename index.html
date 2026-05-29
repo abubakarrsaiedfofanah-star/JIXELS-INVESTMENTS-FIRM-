@@ -727,18 +727,27 @@
         <h2>Rooted in Western Kenya, expanding across county networks.</h2>
         <p>Jixels Technologies uses local presence, route knowledge and county networks to make products and support easier to reach.</p>
       </div>
-      <div class="outlet-grid">
-        <span>Butere HQ</span>
-        <span>Sabatia</span>
-        <span>Mumias</span>
-        <span>Bukura</span>
-        <span>Busia</span>
-        <span>Bungoma</span>
-        <span>Luanda</span>
-        <span>Kisumu</span>
-        <span>Kakamega</span>
-        <span>Mombasa Kengeleni</span>
-        <span>Mombasa Mtwapa</span>
+      <div class="outlet-grid" aria-label="Jixels outlet map buttons">
+        <button type="button" data-outlet-map data-map-label="Butere HQ" data-map-query="Butere Kakamega County Kenya">Butere HQ</button>
+        <button type="button" data-outlet-map data-map-label="Sabatia" data-map-query="Sabatia Vihiga County Kenya">Sabatia</button>
+        <button type="button" data-outlet-map data-map-label="Mumias" data-map-query="Mumias Kakamega County Kenya">Mumias</button>
+        <button type="button" data-outlet-map data-map-label="Bukura" data-map-query="Bukura Kakamega County Kenya">Bukura</button>
+        <button type="button" data-outlet-map data-map-label="Busia" data-map-query="Busia Kenya">Busia</button>
+        <button type="button" data-outlet-map data-map-label="Bungoma" data-map-query="Bungoma Kenya">Bungoma</button>
+        <button type="button" data-outlet-map data-map-label="Luanda" data-map-query="Luanda Vihiga County Kenya">Luanda</button>
+        <button type="button" data-outlet-map data-map-label="Kisumu" data-map-query="Kisumu Kenya">Kisumu</button>
+        <button type="button" data-outlet-map data-map-label="Kakamega" data-map-query="Kakamega Kenya">Kakamega</button>
+        <button type="button" data-outlet-map data-map-label="Mombasa Kengeleni" data-map-query="Kengeleni Mombasa Kenya">Mombasa Kengeleni</button>
+        <button type="button" data-outlet-map data-map-label="Mombasa Mtwapa" data-map-query="Mtwapa Mombasa Kenya">Mombasa Mtwapa</button>
+      </div>
+      <div class="outlet-map-panel" data-outlet-map-panel hidden>
+        <div>
+          <span>General location map</span>
+          <h3 data-outlet-map-title>Butere HQ</h3>
+          <p>Showing a general area map until the exact outlet pin is confirmed.</p>
+        </div>
+        <iframe data-outlet-map-frame title="Jixels outlet location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Butere%20Kakamega%20County%20Kenya&output=embed"></iframe>
+        <a data-outlet-map-link href="https://www.google.com/maps/search/?api=1&query=Butere%20Kakamega%20County%20Kenya" target="_blank" rel="noopener">Open larger map</a>
       </div>
       <div class="outlet-showcase" aria-label="Jixels Technologies outlet photos">
         <article>
@@ -1250,7 +1259,7 @@
   </div>
 
   <div class="footer-bottom">
-    <p class="copyright">&copy; Copyright 2026 Jixels Investments Firm Ltd. All rights reserved.</p>
+    <p class="copyright">&copy; Copyright 2026 Jixels Technologies L.t.d. All rights reserved.</p>
     <p class="footer-tagline">Form ni Tenje - because every connection matters</p>
   </div>
 </footer>

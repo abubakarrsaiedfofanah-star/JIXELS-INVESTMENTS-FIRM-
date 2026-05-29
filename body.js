@@ -185,11 +185,41 @@ window.JixelsBody = (() => {
     });
   };
 
+  const initOutletMaps = () => {
+    const buttons = Array.from(document.querySelectorAll("[data-outlet-map]"));
+    const panel = document.querySelector("[data-outlet-map-panel]");
+    const title = document.querySelector("[data-outlet-map-title]");
+    const frame = document.querySelector("[data-outlet-map-frame]");
+    const link = document.querySelector("[data-outlet-map-link]");
+
+    if (!buttons.length || !panel || !title || !frame || !link) {
+      return;
+    }
+
+    const openMap = (button) => {
+      const label = button.dataset.mapLabel || button.textContent.trim();
+      const query = button.dataset.mapQuery || label;
+      const encodedQuery = encodeURIComponent(query);
+
+      buttons.forEach((item) => item.classList.toggle("is-active", item === button));
+      title.textContent = label;
+      frame.src = `https://www.google.com/maps?q=${encodedQuery}&output=embed`;
+      link.href = `https://www.google.com/maps/search/?api=1&query=${encodedQuery}`;
+      panel.hidden = false;
+      panel.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => openMap(button));
+    });
+  };
+
   const init = () => {
     initForms();
     initTeamSearch();
     initCounters();
     initVideoReel();
+    initOutletMaps();
   };
 
   return { init };
