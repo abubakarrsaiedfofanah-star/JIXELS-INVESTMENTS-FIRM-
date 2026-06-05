@@ -21,10 +21,16 @@
 }
 
 html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   margin: 0;
   color: var(--ink);
   background: var(--paper);
@@ -32,6 +38,28 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+}
+
+main,
+header,
+footer,
+section {
+  max-width: 100%;
+}
+
+img,
+video,
+canvas,
+iframe,
+svg {
+  max-width: 100%;
+}
+
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
 }
 
 img {
@@ -3044,6 +3072,12 @@ footer {
 }
 
 @media (max-width: 760px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+  }
+
   h1 {
     font-size: clamp(2.18rem, 10.8vw, 2.75rem);
     line-height: 1.04;
@@ -3134,7 +3168,7 @@ footer {
   .whatsapp-float {
     right: 16px;
     bottom: 18px;
-    max-width: calc(100vw - 32px);
+    max-width: calc(100% - 32px);
   }
 
   .footer-bottom {

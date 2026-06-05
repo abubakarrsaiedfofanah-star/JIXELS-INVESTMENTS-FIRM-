@@ -302,7 +302,7 @@ footer {
   .whatsapp-float {
     right: 16px;
     bottom: 18px;
-    max-width: calc(100vw - 32px);
+    max-width: calc(100% - 32px);
   }
 
   .footer-invitation,

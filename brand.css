@@ -22,11 +22,13 @@
 
 @media (max-width: 760px) {
   .brand {
-    max-width: min(calc(100vw - 98px), 170px);
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 170px;
   }
 
   .brand img {
-    width: min(calc(100vw - 98px), 170px);
+    width: min(100%, 170px);
     height: auto;
   }
 }

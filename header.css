@@ -8,6 +8,8 @@
   justify-content: space-between;
   gap: clamp(14px, 2vw, 28px);
   min-height: 84px;
+  width: 100%;
+  max-width: 100%;
   padding: 6px clamp(12px, 2vw, 24px);
   border-bottom: 1px solid var(--gold-line);
   background: var(--blue);
@@ -106,6 +108,8 @@ body.single-section-view .site-footer.route-active {
     z-index: 1000;
     right: 0;
     left: 0;
+    width: 100%;
+    max-width: 100%;
     align-items: center;
     flex-wrap: nowrap;
     min-height: 76px;
@@ -132,10 +136,11 @@ body.single-section-view .site-footer.route-active {
     left: 0;
     display: none;
     z-index: 999;
-    width: 100vw;
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
     max-height: calc(100dvh - 76px);
     overflow-y: auto;
+    overflow-x: hidden;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
